@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<style>
+		body {
+			width: 1100px;
+			border: 0;
+			padding: 0px;
+			margin: 0px;
+
+		}
+
+		.fullWidth {
+			width: 700px;
+		}
+
+		.noBorder {
+			border: 0px solid black;
+		}
+
+		.border {
+			border: 0px solid green;
+		}
+
+		.left {
+			width: 450px;
+			min-width: 450px;
+			max-width: 450px;
+		}
+
+		.right {
+			width: 250px;
+
+		}
+
+		.logo {
+			width: 180px;
+		}
+
+		table td,
+		table td * {
+			vertical-align: top;
+			border: 0px;
+		}
+
+		tr.bottomSpacing td {
+			padding-bottom: 25px;
+		}
+
+		#mainTable {
+			width: 700px;
+			border: 0px solid black;
+		}
+
+		#headerTR {
+			width: 100%;
+		}
+
+		.innerTableDetails {
+			width: 500px;
+		}
+
+		.header {
+			background-color: gainsboro;
+		}
+
+		.description {
+			width: 350px;
+		}
+
+		.qty {
+			width: 70px;
+			text-align: right;
+			padding-right: 5px;
+		}
+
+		.price {
+			width: 127px;
+			text-align: right;
+			padding-right: 5px;
+		}
+
+		.amount {
+			width: 127px;
+			text-align: right;
+			padding-right: 5px;
+		}
+	</style>
+</head>
+
+<body>
+	<table id="mainTable">
+		<tr id="headerTR" class="bottomSpacing">
+			<td class="left">
+
+				<table class="innerTableDetails border">
+
+					<tr> <!-- Logo -->
+						<td>
+							<img class="logo" src="https://img.logoipsum.com/299.svg"
+								alt="Logo" />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<h2>Invoice</h2>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							[[Company]]<br>
+							[[FirstName]] [[LastName]]<br>
+							[[Address]]<br>
+							[[PostalCode]] [[City]]
+						</td>
+					</tr>
+
+				</table>
+
+
+			</td>
+			<td class="right border">
+				<h3>CompanyName</h3><br>
+				Street ##<br>
+				1234AB Nijmegen<br>
+				The Netherlands<br>
+				<b>P</b> +31 123 345 678<br>
+				<b>E</b> info@company.info<br>
+				<b>I</b> www.company.info<br>
+				<br>
+				<b>IBAN</b> NL12 ABNA 0123 456 789<br>
+				<b>VAT No</b> NL123456789<br>
+				<b>KvK</b> 777666555
+			</td>
+		</tr>
+		<tr>
+			<td class="left bottomSpacing">
+				<table class="paymentTable border ">
+					<tr>
+						<td>
+							<h3>Payment information</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Amount
+						</td>
+						<td>
+							&euro; [[Amount]]
+						</td>
+					</tr>
+
+					<tr>
+						<td>
+							VAT %
+						</td>
+						<td>
+							[[VATPerc]]
+						</td>
+					</tr>
+					<tr>
+						<td>
+							VAT Amount
+						</td>
+						<td>
+							&euro; [[VATAmount]]
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>Total</b>
+						</td>
+						<td>
+							<b>&euro; [[Total]]</b>
+						</td>
+					</tr>
+
+				</table>
+			</td>
+			<td class="right">
+				<table class="paymentTable border ">
+
+					<tr>
+						<td>
+							<br><br><br><b>Payment Complete</b>
+
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>Date:&nbsp;</b> [[PaymentDate]]
+						</td>
+					</tr>
+
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h3>Delivery information</h3>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<table>
+					<tr class="header">
+						<td class="description">Description</td>
+						<td class="qty">Qty</td>
+						<td class="price">Price</td>
+						<td class="amount">Amount</td>
+					</tr>
+					<tr>
+						<td class="description">[[Description]]</td>
+						<td class="qty">[[Qty]]</td>
+						<td class="price">&euro; [[Amount]]</td>
+						<td class="amount">&euro; [[Amount]]</td>
+					</tr>
+				</table>
+			</td>
+
+		</tr>
+
+	</table>
+</body>
+
+</html>

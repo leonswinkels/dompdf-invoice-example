@@ -5,7 +5,7 @@ Example implementation of basic PDF invoice generation from HTML template using 
 This example implementation uses composer to manage libraries / vendor libraries needed such as DOMPDF itself.
 Other dependencies are not needed. Support files are:
 * template.html - the html based template to be used in converting to a (downloadable) PDF document
-* config.php - a php file containing needed entries for the template
+* pdfgen.php - a php file containing needed entries for the template and the code to generate the stream or PDF attachment
 
 ## templating engine   
 Just kidding - there is no templating engine. Template ' fields' cam ne recogised by the double-square-bracket notation. Example below, feel free to select another notation if it suits your needs better:
@@ -18,4 +18,11 @@ PDFs can be generated in two main ways by DOMPDF. Always look at the official DO
 1. Output the PDF directly to stream --> like open in browser
 2. Output the PDF to string --> like to add as email attachment
 
-Two examples are programmed, see the code examples.
+Two examples are programmed, see the code examples below:
+```
+//Code to generate stream in browser
+$dompdf->stream("Invoice-NUMBER.pdf", array("Attachment" => false));
+
+//Code to generate output string
+$dompdf->output()
+```
