@@ -13,7 +13,7 @@ Just kidding - there is no templating engine. Template ' fields' cam ne recogise
 Hello, [[FirstName]]!
 ```
 
-## Download or stream?
+## download or stream?
 PDFs can be generated in two main ways by DOMPDF. Always look at the official DOMPDF documentation if you want to learn more, but basically:
 1. Output the PDF directly to stream --> like open in browser
 2. Output the PDF to string --> like to add as email attachment
